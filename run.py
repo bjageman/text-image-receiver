@@ -30,8 +30,8 @@ def incoming_sms():
         else:
             filename = None
         if filename:
-            if not os.path.exists(f"static/{username}"):
-                os.mkdir(f"static/{username}")
+            if not os.path.exists(f"static"):
+                os.mkdir(f"static")
             with open(filename, "wb") as f:
                 f.write(r.content)
             print("Thank you! Your image was received.")
